@@ -47,6 +47,8 @@ dependencies {
 	modImplementation "curse.maven:lootr-fabric-615106:${project.lootr_version}"
 	modImplementation include("eu.pb4:polymer-core:${project.polymer_version}")
 	modImplementation include("xyz.nucleoid:server-translations-api:${project.stapi_version}")
+
+	modLocalRuntime "curse.maven:cloth-config-348521:4973440"
 }
 
 processResources {
