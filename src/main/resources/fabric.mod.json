@@ -1,0 +1,29 @@
+{
+	"schemaVersion": 1,
+	"id": "polylootr",
+	"version": "${version}",
+	"name": "PolyLootr",
+	"description": "Allows Lootr to run entirely server-side",
+	"authors": [
+		"unilock"
+	],
+	"contact": {
+		"sources": "https://github.com/unilock/PolyLootr"
+	},
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"cc.unilock.polylootr.PolyLootr"
+		]
+	},
+	"mixins": [
+		"polylootr.mixins.json"
+	],
+	"depends": {
+		"fabricloader": "*",
+		"minecraft": ">=1.20",
+		"fabric-api": "*",
+		"lootr": "*"
+	}
+}
