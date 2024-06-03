@@ -10,6 +10,7 @@
     "LootrMixin",
     "LootrShulkerBlockMixin",
     "LootrTrappedChestBlockMixin",
+    "ModItemsMixin",
     "TrophyBlockMixin"
   ],
   "injectors": {
