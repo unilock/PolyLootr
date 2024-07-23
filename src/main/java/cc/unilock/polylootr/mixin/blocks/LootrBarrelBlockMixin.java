@@ -1,10 +1,10 @@
-package cc.unilock.polylootr.mixin;
+package cc.unilock.polylootr.mixin.blocks;
 
 import eu.pb4.polymer.core.api.block.PolymerBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
-import net.zestyblaze.lootr.block.LootrBarrelBlock;
+import net.zestyblaze.lootr.blocks.LootrBarrelBlock;
 import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(LootrBarrelBlock.class)

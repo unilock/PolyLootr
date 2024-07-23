@@ -3,15 +3,15 @@
   "package": "cc.unilock.polylootr.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "LootrBarrelBlockMixin",
-    "LootrChestBlockMixin",
-    "LootrChestMinecartEntityMixin",
-    "LootrInventoryBlockMixin",
     "LootrMixin",
-    "LootrShulkerBlockMixin",
-    "LootrTrappedChestBlockMixin",
-    "ModItemsMixin",
-    "TrophyBlockMixin"
+    "blocks.LootrBarrelBlockMixin",
+    "blocks.LootrChestBlockMixin",
+    "blocks.LootrInventoryBlockMixin",
+    "blocks.LootrShulkerBlockMixin",
+    "blocks.LootrTrappedChestBlockMixin",
+    "blocks.TrophyBlockMixin",
+    "entity.LootrChestMinecartEntityMixin",
+    "registry.ModItemsMixin"
   ],
   "injectors": {
     "defaultRequire": 1

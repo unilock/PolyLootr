@@ -1,4 +1,4 @@
-package cc.unilock.polylootr.mixin;
+package cc.unilock.polylootr.mixin.blocks;
 
 import eu.pb4.polymer.core.api.block.PolymerHeadBlock;
 import net.minecraft.core.BlockPos;
@@ -6,7 +6,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
-import net.zestyblaze.lootr.block.TrophyBlock;
+import net.zestyblaze.lootr.blocks.TrophyBlock;
 import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(TrophyBlock.class)

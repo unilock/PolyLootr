@@ -1,4 +1,4 @@
-package cc.unilock.polylootr.mixin;
+package cc.unilock.polylootr.mixin.entity;
 
 import eu.pb4.polymer.core.api.entity.PolymerEntity;
 import net.minecraft.server.level.ServerPlayer;
