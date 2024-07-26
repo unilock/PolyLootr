@@ -44,11 +44,11 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	modImplementation "curse.maven:lootr-fabric-615106:${project.lootr_version}"
+	//modImplementation "curse.maven:lootr-fabric-615106:${project.lootr_version}"
 	modImplementation include("eu.pb4:polymer-core:${project.polymer_version}")
 	modImplementation include("xyz.nucleoid:server-translations-api:${project.stapi_version}")
 
-	modLocalRuntime "curse.maven:cloth-config-348521:4973455"
+	modLocalRuntime "curse.maven:cloth-config-348521:5553804"
 }
 
 processResources {
@@ -61,14 +61,14 @@ processResources {
 
 tasks.withType(JavaCompile).configureEach {
 	it.options.encoding = "UTF-8"
-	it.options.release = 17
+	it.options.release = 21
 }
 
 java {
 	withSourcesJar()
 
-	sourceCompatibility = JavaVersion.VERSION_17
-	targetCompatibility = JavaVersion.VERSION_17
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
 }
 
 jar {

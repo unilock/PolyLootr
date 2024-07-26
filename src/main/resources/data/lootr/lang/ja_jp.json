@@ -13,6 +13,7 @@
   "lootr.message.refresh_in": "この宝箱は、%s秒後に中身を再生成します。",
   "lootr.message.refresh_start": "この宝箱は、%s秒後に中身が新しく再生成されます！",
   "lootr.message.invalid_table": "この宝箱[%s]の中身のアイテムを空のまま生成してしまいました。エラーの内容は「latest.log」を参照してください。",
+  "lootr.message.invalid_block": "開こうとした宝箱は、識別子が生成されていないため開くことができません。",
   "block.lootr.lootr_chest": "お宝チェスト",
   "block.lootr.lootr_trapped_chest": "お宝チェスト",
   "block.lootr.lootr_barrel": "お宝樽",
@@ -54,6 +55,8 @@
   "text.autoconfig.lootr.option.conversion": "変換",
   "text.autoconfig.lootr.option.conversion.max_entry_age": "ブロックエンティティの最大保存期間",
   "text.autoconfig.lootr.option.conversion.disable": "変換を無効化",
+  "text.autoconfig.lootr.option.conversion.elytra": "エリトラ入りの額縁を変換",
+  "text.autoconfig.lootr.option.conversion.world_border": "ワールドボーダー外での変換を無効化",
   "text.autoconfig.lootr.option.breaking": "破壊",
   "text.autoconfig.lootr.option.breaking.enable_break": "すべての破壊を許可",
   "text.autoconfig.lootr.option.breaking.enable_fake_player_break": "偽のプレイヤーによる破壊を許可",
@@ -84,6 +87,8 @@
   "text.autoconfig.lootr.option.notifications": "通知",
   "text.autoconfig.lootr.option.notifications.notification_delay": "崩壊",
   "text.autoconfig.lootr.option.notifications.disable_notifications": "通知を無効化",
-  "text.autoconfig.lootr.option.vanilla": "バニラ",
-  "text.autoconfig.lootr.option.vanilla.vanilla_textures": "バニラのテクスチャを使用"
+  "text.autoconfig.lootr.option.notifications.disable_message_styles": "通知のフォーマットと書式設定を無効化",
+  "text.autoconfig.lootr.option.client": "クライアント側",
+  "text.autoconfig.lootr.option.client.vanilla_textures": "バニラのテクスチャを使用",
+  "text.autoconfig.lootr.option.client.old_textures": "クラシックテクスチャ"
 }

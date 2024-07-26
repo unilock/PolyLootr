@@ -7,31 +7,31 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
-import net.zestyblaze.lootr.registry.LootrBlockInit;
-import net.zestyblaze.lootr.registry.LootrItemInit;
+import noobanidus.mods.lootr.init.ModBlocks;
+import noobanidus.mods.lootr.init.ModItems;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
-@Mixin(LootrItemInit.class)
+@Mixin(ModItems.class)
 public class ModItemsMixin {
 	@WrapOperation(method = "<clinit>", at = @At(value = "NEW", target = "(Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/item/Item$Properties;)Lnet/minecraft/world/item/BlockItem;"))
 	private static BlockItem newBlockItem(Block block, Item.Properties properties, Operation<BlockItem> original) {
-		if (block.equals(LootrBlockInit.BARREL)) {
+		if (block.equals(ModBlocks.BARREL)) {
 			return new PolymerBlockItem(block, properties, Items.BARREL);
 		}
-		if (block.equals(LootrBlockInit.CHEST)) {
+		if (block.equals(ModBlocks.CHEST)) {
 			return new PolymerBlockItem(block, properties, Items.CHEST);
 		}
-		if (block.equals(LootrBlockInit.INVENTORY)) {
+		if (block.equals(ModBlocks.INVENTORY)) {
 			return new PolymerBlockItem(block, properties, Items.CHEST);
 		}
-		if (block.equals(LootrBlockInit.SHULKER)) {
+		if (block.equals(ModBlocks.SHULKER)) {
 			return new PolymerBlockItem(block, properties, Items.SHULKER_BOX);
 		}
-		if (block.equals(LootrBlockInit.TRAPPED_CHEST)) {
+		if (block.equals(ModBlocks.TRAPPED_CHEST)) {
 			return new PolymerBlockItem(block, properties, Items.TRAPPED_CHEST);
 		}
-		if (block.equals(LootrBlockInit.TROPHY)) {
+		if (block.equals(ModBlocks.TROPHY)) {
 			return new PolymerBlockItem(block, properties, Items.PLAYER_HEAD);
 		}
 

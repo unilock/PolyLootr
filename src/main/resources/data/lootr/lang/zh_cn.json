@@ -13,6 +13,7 @@
   "lootr.message.refresh_in": "这个容器将在%s秒内刷新里面的物品。",
   "lootr.message.refresh_start": "容器将在%s秒后用新的物品进行刷新！",
   "lootr.message.invalid_table": "这个容器的战利品表[%s]为空，战利品无法生成。检查你的 `latest.log` 中是否有报错。",
+  "lootr.message.invalid_block": "你试图打开的容器无效，因为它没有生成标识符。",
   "block.lootr.lootr_chest": "战利品箱子",
   "block.lootr.lootr_trapped_chest": "战利品箱子",
   "block.lootr.lootr_barrel": "战利品木桶",
@@ -54,6 +55,8 @@
   "text.autoconfig.lootr.option.conversion": "转换",
   "text.autoconfig.lootr.option.conversion.max_entry_age": "最大方块实体寿命",
   "text.autoconfig.lootr.option.conversion.disable": "禁用转换",
+  "text.autoconfig.lootr.option.conversion.elytra": "转换鞘翅物品展示框",
+  "text.autoconfig.lootr.option.conversion.world_border": "禁用世界边界外的转换",
   "text.autoconfig.lootr.option.breaking": "破坏",
   "text.autoconfig.lootr.option.breaking.enable_break": "启用所有破坏",
   "text.autoconfig.lootr.option.breaking.enable_fake_player_break": "启用假玩家破坏",
@@ -84,6 +87,8 @@
   "text.autoconfig.lootr.option.notifications": "通知",
   "text.autoconfig.lootr.option.notifications.notification_delay": "延迟",
   "text.autoconfig.lootr.option.notifications.disable_notifications": "禁用通知",
-  "text.autoconfig.lootr.option.vanilla": "原版",
-  "text.autoconfig.lootr.option.vanilla.vanilla_textures": "原版纹理"
+  "text.autoconfig.lootr.option.notifications.disable_message_styles": "禁用通知中的样式和格式",
+  "text.autoconfig.lootr.option.client": "客户端",
+  "text.autoconfig.lootr.option.client.vanilla_textures": "原版纹理",
+  "text.autoconfig.lootr.option.client.old_textures": "经典纹理"
 }
