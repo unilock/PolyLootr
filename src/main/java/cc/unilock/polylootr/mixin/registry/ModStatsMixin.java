@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(ModStats.class)
+@Mixin(value = ModStats.class, remap = false)
 public class ModStatsMixin {
 	@Shadow
 	public static ResourceLocation LOOTED_LOCATION;
