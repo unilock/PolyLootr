@@ -11,7 +11,8 @@
     "blocks.LootrTrappedChestBlockMixin",
     "blocks.TrophyBlockMixin",
     "entity.LootrChestMinecartEntityMixin",
-    "registry.ModItemsMixin"
+    "registry.ModItemsMixin",
+    "registry.ModStatsMixin"
   ],
   "injectors": {
     "defaultRequire": 1
