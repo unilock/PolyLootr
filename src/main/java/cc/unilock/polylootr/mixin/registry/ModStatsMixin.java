@@ -22,7 +22,7 @@ public class ModStatsMixin {
 
 	@Inject(method = "registerStats", at = @At("HEAD"), cancellable = true)
 	private static void registerStats(CallbackInfo ci) {
-		PolymerStat.registerStat(LOOTED_LOCATION, StatFormatter.DEFAULT);
+		LOOTED_LOCATION = PolymerStat.registerStat(LOOTED_LOCATION, StatFormatter.DEFAULT);
 		LOOTED_STAT = Stats.CUSTOM.get(LOOTED_LOCATION);
 		ci.cancel();
 	}
