@@ -7,7 +7,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import noobanidus.mods.lootr.block.LootrShulkerBlock;
+import noobanidus.mods.lootr.common.block.LootrShulkerBlock;
 import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(LootrShulkerBlock.class)

@@ -7,8 +7,8 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
-import noobanidus.mods.lootr.init.ModBlocks;
-import noobanidus.mods.lootr.init.ModItems;
+import noobanidus.mods.lootr.fabric.init.ModBlocks;
+import noobanidus.mods.lootr.fabric.init.ModItems;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 

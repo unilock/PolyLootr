@@ -5,7 +5,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.stats.Stat;
 import net.minecraft.stats.StatFormatter;
 import net.minecraft.stats.Stats;
-import noobanidus.mods.lootr.init.ModStats;
+import noobanidus.mods.lootr.fabric.init.ModStats;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;

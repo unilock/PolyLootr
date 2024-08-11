@@ -2,9 +2,9 @@ package cc.unilock.polylootr.mixin;
 
 import eu.pb4.polymer.core.api.block.PolymerBlockUtils;
 import eu.pb4.polymer.core.api.entity.PolymerEntityUtils;
-import noobanidus.mods.lootr.Lootr;
-import noobanidus.mods.lootr.init.ModBlockEntities;
-import noobanidus.mods.lootr.init.ModEntities;
+import noobanidus.mods.lootr.fabric.Lootr;
+import noobanidus.mods.lootr.fabric.init.ModBlockEntities;
+import noobanidus.mods.lootr.fabric.init.ModEntities;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
