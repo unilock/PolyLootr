@@ -8,7 +8,8 @@
 		"unilock"
 	],
 	"contact": {
-		"sources": "https://github.com/unilock/PolyLootr"
+		"sources": "https://github.com/unilock/PolyLootr",
+		"issues": "https://github.com/unilock/PolyLootr/issues"
 	},
 	"license": "MIT",
 	"environment": "*",
