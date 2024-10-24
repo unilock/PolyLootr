@@ -11,6 +11,8 @@
     "blocks.LootrTrappedChestBlockMixin",
     "blocks.TrophyBlockMixin",
     "entity.LootrChestMinecartEntityMixin",
+    "lang.FolderRepositorySourceAccessor",
+    "lang.PackRepositoryMixin",
     "registry.ModItemsMixin",
     "registry.ModStatsMixin"
   ],
