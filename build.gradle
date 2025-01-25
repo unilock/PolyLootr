@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.8.+'
+	id 'fabric-loom' version '1.9.+'
 	id 'maven-publish'
 }
 
@@ -16,19 +16,19 @@ repositories {
 	maven { url = "https://maven.nucleoid.xyz" }
 
 	exclusiveContent {
-        forRepository {
-            maven {
-                url = "https://cursemaven.com"
-            }
-        }
-        filter {
-            includeGroup "curse.maven"
-        }
-    }
+		forRepository {
+			maven {
+				url = "https://cursemaven.com"
+			}
+		}
+		filter {
+			includeGroup "curse.maven"
+		}
+	}
 }
 
 loom {
-    mods {
+	mods {
 		"polylootr" {
 			sourceSet("main")
 		}
@@ -38,9 +38,9 @@ loom {
 dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings loom.layered() {
-        officialMojangMappings()
-        parchment("org.parchmentmc.data:parchment-1.21:${project.parchment_mappings}@zip")
-    }
+		officialMojangMappings()
+		parchment("org.parchmentmc.data:parchment-${project.minecraft_version}:${project.parchment_mappings}@zip")
+	}
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
@@ -48,7 +48,7 @@ dependencies {
 	modImplementation include("eu.pb4:polymer-core:${project.polymer_version}")
 	modImplementation include("xyz.nucleoid:server-translations-api:${project.stapi_version}")
 
-	modLocalRuntime "curse.maven:cloth-config-348521:5729125"
+	modLocalRuntime "curse.maven:cloth-config-348521:5987042"
 }
 
 processResources {

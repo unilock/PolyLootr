@@ -10,14 +10,13 @@ import net.minecraft.server.packs.PackLocationInfo;
 import net.minecraft.server.packs.PackResources;
 import net.minecraft.server.packs.PackSelectionConfig;
 import net.minecraft.server.packs.PackType;
-import net.minecraft.server.packs.metadata.MetadataSectionSerializer;
+import net.minecraft.server.packs.metadata.MetadataSectionType;
 import net.minecraft.server.packs.metadata.pack.PackMetadataSection;
 import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
 import net.minecraft.server.packs.repository.RepositorySource;
 import net.minecraft.server.packs.resources.IoSupplier;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -58,7 +57,6 @@ public record LangPackProvider(ModContainer mod) implements RepositorySource, Pa
 	}
 
 	@Override
-	@Nullable
 	public IoSupplier<InputStream> getRootResource(String... elements) {
 		var path = mod.findPath(String.join("/", elements));
 
@@ -66,7 +64,6 @@ public record LangPackProvider(ModContainer mod) implements RepositorySource, Pa
 	}
 
 	@Override
-	@Nullable
 	public IoSupplier<InputStream> getResource(PackType packType, ResourceLocation location) {
 		var path = mod.findPath("assets/" + location.getNamespace() + "/" + location.getPath());
 
@@ -85,6 +82,7 @@ public record LangPackProvider(ModContainer mod) implements RepositorySource, Pa
 			String separator = optional.get().getFileSystem().getSeparator();
 			Files.walkFileTree(optional.get(), new SimpleFileVisitor<>() {
 				@Override
+				@NotNull
 				public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
 					String filename = optional.get().relativize(file).toString().replace(separator, "/");
 					ResourceLocation location = ResourceLocation.tryBuild(namespace, path + "/" + filename);
@@ -108,9 +106,8 @@ public record LangPackProvider(ModContainer mod) implements RepositorySource, Pa
 	}
 
 	@Override
-	@Nullable
-	public <T> T getMetadataSection(MetadataSectionSerializer<T> deserializer) {
-		return BuiltInMetadata.of(PackMetadataSection.TYPE, new PackMetadataSection(Component.literal("PolyLootr"), SharedConstants.getCurrentVersion().getPackVersion(PackType.SERVER_DATA), Optional.empty())).get(deserializer);
+	public <T> T getMetadataSection(MetadataSectionType<T> type) throws IOException {
+		return BuiltInMetadata.of(PackMetadataSection.TYPE, new PackMetadataSection(Component.literal("PolyLootr"), SharedConstants.getCurrentVersion().getPackVersion(PackType.SERVER_DATA), Optional.empty())).get(type);
 	}
 
 	@Override
