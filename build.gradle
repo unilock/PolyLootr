@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.9.+'
+	id 'fabric-loom' version '1.14-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -18,11 +18,12 @@ repositories {
 	exclusiveContent {
 		forRepository {
 			maven {
-				url = "https://cursemaven.com"
+				name = "Modrinth"
+				url = "https://api.modrinth.com/maven"
 			}
 		}
 		filter {
-			includeGroup "curse.maven"
+			includeGroup "maven.modrinth"
 		}
 	}
 }
@@ -44,18 +45,18 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	modImplementation "curse.maven:lootr-fabric-615106:${project.lootr_version}"
+	modImplementation "maven.modrinth:lootr:${project.lootr_version}"
 	modImplementation include("eu.pb4:polymer-core:${project.polymer_version}")
-	modImplementation include("xyz.nucleoid:server-translations-api:${project.stapi_version}")
+	modImplementation include("eu.pb4:polymer-resource-pack:${project.polymer_version}")
 
-	modLocalRuntime "curse.maven:cloth-config-348521:5987042"
+	modLocalRuntime "maven.modrinth:cloth-config:20.0.149+fabric"
 }
 
 processResources {
 	inputs.property "version", project.version
 
 	filesMatching("fabric.mod.json") {
-		expand "version": project.version
+		expand "version": inputs.properties.version
 	}
 }
 
@@ -72,15 +73,18 @@ java {
 }
 
 jar {
+	inputs.property "archivesName", project.base.archivesName
+
 	from("LICENSE") {
-		rename { "${it}_${base.archivesName.get()}" }
+		rename { "${it}_${inputs.properties.archivesName}"}
 	}
 }
 
 // Configure the maven publication
 publishing {
 	publications {
-		mavenJava(MavenPublication) {
+		create("mavenJava", MavenPublication) {
+			artifactId = project.archives_base_name
 			from components.java
 		}
 	}

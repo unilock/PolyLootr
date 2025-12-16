@@ -1,5 +1,6 @@
 package cc.unilock.polylootr;
 
+import eu.pb4.polymer.resourcepack.api.PolymerResourcePackUtils;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,5 +12,7 @@ public class PolyLootr implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Hello from PolyLootr!");
+
+		PolymerResourcePackUtils.addModAssets("lootr");
 	}
 }
