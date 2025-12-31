@@ -45,11 +45,11 @@ public class LootrMixin {
 			}
 		});
 
-		PolymerBlockUtils.registerBlockEntity(ModBlockEntities.LOOTR_BARREL);
-		PolymerBlockUtils.registerBlockEntity(ModBlockEntities.LOOTR_CHEST);
-		PolymerBlockUtils.registerBlockEntity(ModBlockEntities.LOOTR_INVENTORY);
-		PolymerBlockUtils.registerBlockEntity(ModBlockEntities.LOOTR_SHULKER);
-		PolymerBlockUtils.registerBlockEntity(ModBlockEntities.LOOTR_TRAPPED_CHEST);
+		PolymerBlockUtils.registerBlockEntity(ModBlockEntities.LOOTR_BARREL, (obj, ctx) -> BlockEntityType.BARREL);
+		PolymerBlockUtils.registerBlockEntity(ModBlockEntities.LOOTR_CHEST, (obj, ctx) -> BlockEntityType.CHEST);
+		PolymerBlockUtils.registerBlockEntity(ModBlockEntities.LOOTR_INVENTORY, (obj, ctx) -> BlockEntityType.CHEST);
+		PolymerBlockUtils.registerBlockEntity(ModBlockEntities.LOOTR_SHULKER, (obj, ctx) -> BlockEntityType.SHULKER_BOX);
+		PolymerBlockUtils.registerBlockEntity(ModBlockEntities.LOOTR_TRAPPED_CHEST, (obj, ctx) -> BlockEntityType.TRAPPED_CHEST);
 
 		PolymerItemUtils.registerOverlay(ModItems.BARREL, new SimplePolymerItem(Items.BARREL));
 		PolymerItemUtils.registerOverlay(ModItems.CHEST, new SimplePolymerItem(Items.CHEST));
@@ -58,6 +58,6 @@ public class LootrMixin {
 		PolymerItemUtils.registerOverlay(ModItems.TRAPPED_CHEST, new SimplePolymerItem(Items.TRAPPED_CHEST));
 		PolymerItemUtils.registerOverlay(ModItems.TROPHY, new SimplePolymerItem(Items.PLAYER_HEAD));
 
-		PolymerEntityUtils.registerOverlay(ModEntities.LOOTR_MINECART_ENTITY, type -> context -> EntityType.CHEST_MINECART);
+		PolymerEntityUtils.registerOverlay(ModEntities.LOOTR_MINECART_ENTITY, obj -> ctx -> EntityType.CHEST_MINECART);
 	}
 }
