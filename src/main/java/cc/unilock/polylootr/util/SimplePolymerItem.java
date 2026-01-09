@@ -1,7 +1,7 @@
 package cc.unilock.polylootr.util;
 
 import eu.pb4.polymer.core.api.item.PolymerItem;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.Nullable;
@@ -20,7 +20,7 @@ public class SimplePolymerItem implements PolymerItem {
 	}
 
 	@Override
-	public @Nullable ResourceLocation getPolymerItemModel(ItemStack stack, PacketContext context) {
+	public @Nullable Identifier getPolymerItemModel(ItemStack stack, PacketContext context) {
 		return null;
 	}
 }

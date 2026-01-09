@@ -24,6 +24,8 @@ public class SimplePolymerBlockWithEntity implements PolymerBlock {
 
 	@Override
 	public void onPolymerBlockSend(BlockState blockState, BlockPos.MutableBlockPos pos, PacketContext.NotNullWithPlayer contexts) {
-		contexts.getClientConnection().send(PolymerBlockUtils.createBlockEntityPacket(pos, this.type, null));
+		if (contexts.getClientConnection() != null) {
+			contexts.getClientConnection().send(PolymerBlockUtils.createBlockEntityPacket(pos, this.type, null));
+		}
 	}
 }
