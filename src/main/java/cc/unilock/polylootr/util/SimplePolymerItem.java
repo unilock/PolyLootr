@@ -1,11 +1,11 @@
 package cc.unilock.polylootr.util;
 
 import eu.pb4.polymer.core.api.item.PolymerItem;
+import net.fabricmc.fabric.api.networking.v1.context.PacketContext;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import org.jetbrains.annotations.Nullable;
-import xyz.nucleoid.packettweaker.PacketContext;
 
 public class SimplePolymerItem implements PolymerItem {
 	private final Item item;
@@ -20,7 +20,7 @@ public class SimplePolymerItem implements PolymerItem {
 	}
 
 	@Override
-	public @Nullable Identifier getPolymerItemModel(ItemStack stack, PacketContext context) {
+	public Identifier getPolymerItemModel(ItemStack stack, PacketContext context, HolderLookup.Provider lookup) {
 		return null;
 	}
 }

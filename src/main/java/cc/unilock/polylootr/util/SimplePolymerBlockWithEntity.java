@@ -2,11 +2,12 @@ package cc.unilock.polylootr.util;
 
 import eu.pb4.polymer.core.api.block.PolymerBlock;
 import eu.pb4.polymer.core.api.block.PolymerBlockUtils;
+import net.fabricmc.fabric.api.networking.v1.context.PacketContext;
 import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import xyz.nucleoid.packettweaker.PacketContext;
 
 public class SimplePolymerBlockWithEntity implements PolymerBlock {
 	private final Block block;
@@ -23,9 +24,7 @@ public class SimplePolymerBlockWithEntity implements PolymerBlock {
 	}
 
 	@Override
-	public void onPolymerBlockSend(BlockState blockState, BlockPos.MutableBlockPos pos, PacketContext.NotNullWithPlayer contexts) {
-		if (contexts.getClientConnection() != null) {
-			contexts.getClientConnection().send(PolymerBlockUtils.createBlockEntityPacket(pos, this.type, null));
-		}
+	public void onPolymerBlockSend(BlockState blockState, BlockPos.MutableBlockPos pos, ServerPlayer player) {
+		player.connection.send(PolymerBlockUtils.createBlockEntityPacket(pos, this.type, null));
 	}
 }
